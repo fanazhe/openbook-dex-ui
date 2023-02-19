@@ -39,9 +39,9 @@ export const TVChartContainer = () => {
   const defaultProps: ChartContainerProps = {
     symbol: 'BTC/USDC',
     // @ts-ignore
-    interval: '60',
+    interval: '5',
     auto_save_delay: 5,
-    theme: 'Dark',
+    theme: 'Light',
     containerId: 'tv_chart_container',
     // datafeed: datafeed,
     libraryPath: '/charting_library/',
@@ -98,12 +98,12 @@ export const TVChartContainer = () => {
       theme: defaultProps.theme === 'Dark' ? 'Dark' : 'Light',
       overrides: {
         ...savedProperties,
-        'mainSeriesProperties.candleStyle.upColor': '#41C77A',
-        'mainSeriesProperties.candleStyle.downColor': '#F23B69',
-        'mainSeriesProperties.candleStyle.borderUpColor': '#41C77A',
-        'mainSeriesProperties.candleStyle.borderDownColor': '#F23B69',
-        'mainSeriesProperties.candleStyle.wickUpColor': '#41C77A',
-        'mainSeriesProperties.candleStyle.wickDownColor': '#F23B69',
+        // 'mainSeriesProperties.candleStyle.upColor': '#41C77A',
+        // 'mainSeriesProperties.candleStyle.downColor': '#F23B69',
+        // 'mainSeriesProperties.candleStyle.borderUpColor': '#41C77A',
+        // 'mainSeriesProperties.candleStyle.borderDownColor': '#F23B69',
+        // 'mainSeriesProperties.candleStyle.wickUpColor': '#41C77A',
+        // 'mainSeriesProperties.candleStyle.wickDownColor': '#F23B69',
       },
       // @ts-ignore
       save_load_adapter: saveLoadAdapter,

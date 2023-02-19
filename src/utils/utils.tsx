@@ -6,7 +6,6 @@ import {
   Transaction,
   TransactionInstruction,
   TransactionMessage,
-  VersionedMessage,
   VersionedTransaction,
 } from '@solana/web3.js';
 import BN from 'bn.js';
@@ -32,7 +31,7 @@ export async function sleep(ms) {
 export const percentFormat = new Intl.NumberFormat(undefined, {
   style: 'percent',
   minimumFractionDigits: 2,
-  maximumFractionDigits: 2,
+  maximumFractionDigits: 3,
 });
 
 export function floorToDecimal(
@@ -244,7 +243,7 @@ export async function addPriorityFeesIfNecessary(
     ),
   );
 
-  if (priorityFee != undefined) {
+  if (priorityFee !== undefined) {
     transaction.instructions.unshift(
       ComputeBudgetProgram.setComputeUnitPrice({
         microLamports: Math.floor(
@@ -254,7 +253,7 @@ export async function addPriorityFeesIfNecessary(
     );
   }
 
-  if (computeUnits != undefined) {
+  if (computeUnits !== undefined) {
     transaction.instructions.unshift(
       ComputeBudgetProgram.setComputeUnitLimit({
         units: maxComputeUnits,

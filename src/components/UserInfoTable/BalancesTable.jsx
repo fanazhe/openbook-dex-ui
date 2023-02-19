@@ -5,7 +5,7 @@ import {
   getSelectedTokenAccountForMint,
 } from '../../utils/markets';
 import DataTable from '../layout/DataTable';
-import { useSendConnection } from '../../utils/connection';
+import { useSendConnection, useConnectionConfig } from '../../utils/connection';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { settleFunds } from '../../utils/send';
 import { notify } from '../../utils/notifications';

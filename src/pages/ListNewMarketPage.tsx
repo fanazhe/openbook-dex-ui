@@ -11,7 +11,6 @@ import { useMintInput } from '../components/useMintInput';
 import { PublicKey } from '@solana/web3.js';
 import {
   BaseSignerWalletAdapter,
-  BaseWalletAdapter,
 } from '@solana/wallet-adapter-base';
 
 const { Text, Title } = Typography;

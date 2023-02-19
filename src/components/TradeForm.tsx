@@ -21,7 +21,6 @@ import {
 } from '../utils/utils';
 import { BaseSignerWalletAdapter } from '@solana/wallet-adapter-base';
 import {
-  useConnection,
   useConnectionConfig,
   useSendConnection,
 } from '../utils/connection';

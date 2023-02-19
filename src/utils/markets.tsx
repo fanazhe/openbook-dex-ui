@@ -39,7 +39,7 @@ import {
 } from './types';
 import { WRAPPED_SOL_MINT } from '@openbook-dex/openbook/lib/token-instructions';
 import { Order } from '@openbook-dex/openbook/lib/market';
-import AlephApi from './mysteryConnector';
+import BonfidaApi from './bonfidaConnector';
 
 // Used in debugging, should be false in production
 const _IGNORE_DEPRECATED = false;
@@ -178,7 +178,7 @@ const _SLOW_REFRESH_INTERVAL = 5 * 1000;
 const _FAST_REFRESH_INTERVAL = 1000;
 
 export const DEFAULT_MARKET = USE_MARKETS.find(
-  ({ name, deprecated }) => name === 'SRM/USDT' && !deprecated,
+  ({ name, deprecated }) => name === 'SOL/USDC' && !deprecated,
 );
 
 export function getMarketDetails(
@@ -376,7 +376,7 @@ export function useBonfidaTrades() {
       return null;
     }
 
-    return await AlephApi.getRecentTrades(marketAddress);
+    return await BonfidaApi.getRecentTrades(marketAddress);
   }
 
   return useAsyncData(

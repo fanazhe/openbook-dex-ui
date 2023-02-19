@@ -17,15 +17,15 @@ input[type=number]:focus::-webkit-inner-spin-button {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2d313c;
+  background: #93a1a1;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #5b5f67;
+  background: #657b83;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #5b5f67;
+  background: #586e75;
 }
 .ant-slider-track, .ant-slider:hover .ant-slider-track {
   background-color: #2abdd2;
@@ -43,10 +43,16 @@ input[type=number]:focus::-webkit-inner-spin-button {
   border: 2px solid #2abdd2; 
 }
 .ant-table-tbody > tr.ant-table-row:hover > td {
-  background: #273043;
+  background: #839496;
 }
 .ant-table-tbody > tr > td {
-  border-bottom: 8px solid #1A2029;
+  border-bottom: 8px solid #93a1a1;
+}
+.ant-table-thead th.ant-table-column-has-sorters:hover {
+  background: #839496;
+}
+.ant-table-tbody > tr.ant-table-placeholder:hover > td {
+  background: #839496;
 }
 .ant-table-container table > thead > tr:first-child th {
   border-bottom: none;
@@ -55,13 +61,13 @@ input[type=number]:focus::-webkit-inner-spin-button {
   border-top: 1px solid #434a59 !important;
 }
 .ant-layout {
-    background: #11161D
+    background: #fdf6e3;
   }
   .ant-table {
-    background: #212734;
+    background: #657b83;
   }
   .ant-table-thead > tr > th {
-    background: #1A2029;
+    background: #93a1a1;
   }
 .ant-select-item-option-content {
   img {
@@ -69,23 +75,30 @@ input[type=number]:focus::-webkit-inner-spin-button {
   }
 }
 .ant-modal-content {
-  background-color: #212734;
+  background-color: #fdf6e3;
+}
+.ant-layout-footer {
+  background-color: #eee8d5;
+}
+.ant-menu-horizontal > .ant-menu-item::after, .ant-menu-horizontal > .ant-menu-submenu::after {
+  left: 0;
+  right: 0;
 }
 
 @-webkit-keyframes highlight {
   from { background-color: #2abdd2;}
-  to {background-color: #1A2029;}
+  to {background-color: #93a1a1;}
 }
 @-moz-keyframes highlight {
   from { background-color: #2abdd2;}
-  to {background-color: #1A2029;}
+  to {background-color: #93a1a1;}
 }
 @-keyframes highlight {
   from { background-color: #2abdd2;}
-  to {background-color: #1A2029;}
+  to {background-color: #93a1a1;}
 }
 .flash {
-  -moz-animation: highlight 0.5s ease 0s 1 alternate ;
-  -webkit-animation: highlight 0.5s ease 0s 1 alternate;
-  animation: highlight 0.5s ease 0s 1 alternate;
+  -moz-animation: highlight 0.1s ease 0s 1 alternate ;
+  -webkit-animation: highlight 0.1s ease 0s 1 alternate;
+  animation: highlight 0.1s ease 0s 1 alternate;
 }`;

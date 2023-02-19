@@ -35,7 +35,7 @@ const { Title } = Typography;
 
 const ActionButton = styled(Button)`
   color: #2abdd2;
-  background-color: #212734;
+  background-color: #657b83;
   border-width: 0px;
 `;
 

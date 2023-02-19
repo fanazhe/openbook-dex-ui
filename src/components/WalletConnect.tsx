@@ -44,6 +44,7 @@ export default function WalletConnect() {
               }
         }
         overlay={menu}
+        style={{ display: 'block' }}
       >
         {connected ? 'Disconnect' : 'Connect'}
       </Dropdown.Button>

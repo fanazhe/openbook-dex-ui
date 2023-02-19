@@ -190,7 +190,9 @@ const OrderbookRow = React.memo(
                 : 'rgba(242, 60, 105, 0.6)'
             }
           />
-          <Price onClick={onPriceClick}>{formattedPrice}</Price>
+          <Price onClick={onPriceClick} style={{ color: 'black' }}>
+            {formattedPrice}
+          </Price>
         </Col>
       </Row>
     );

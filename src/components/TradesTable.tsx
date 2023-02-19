@@ -1,11 +1,9 @@
 import { Col, Row } from 'antd';
-import React from 'react';
 import styled from 'styled-components';
 import { useMarket, useBonfidaTrades } from '../utils/markets';
 import { getDecimalCount } from '../utils/utils';
 import FloatingElement from './layout/FloatingElement';
 import { BonfidaTrade } from '../utils/types';
-import BN from 'bn.js';
 
 const Title = styled.div`
   color: rgba(255, 255, 255, 1);
@@ -69,7 +67,7 @@ export default function PublicTrades({ smallScreen }) {
               </Col>
               <Col span={8} style={{ textAlign: 'right' }}>
                 {market?.minOrderSize && !isNaN(trade.size)
-                  ? market!.baseSplSizeToNumber(new BN(trade.size))
+                  ? Number(trade.size).toFixed(getDecimalCount(market.minOrderSize))
                   : trade.size}
               </Col>
               <Col span={8} style={{ textAlign: 'right', color: '#434a59' }}>

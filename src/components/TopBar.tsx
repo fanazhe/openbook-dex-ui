@@ -11,7 +11,6 @@ import styled from 'styled-components';
 import { useWallet } from '@solana/wallet-adapter-react';
 import {
   ENDPOINTS,
-  useConnection,
   useConnectionConfig,
 } from '../utils/connection';
 import Settings from './Settings';
@@ -25,7 +24,7 @@ import { getTradePageUrl } from '../utils/markets';
 import { COMPUTE_UNIT_LIMIT, MAX_PRIORITY_FEE } from '../utils/constants';
 
 const Wrapper = styled.div`
-  background-color: #0d1017;
+  background-color: #eee8d5;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -163,7 +162,7 @@ export default function TopBar() {
       <Wrapper>
         <LogoWrapper onClick={() => history.push(tradePageUrl)}>
           <img src={logo} alt="" />
-          {'SERUM'}
+          {'LUCY'}
         </LogoWrapper>
         <Menu
           mode="horizontal"
@@ -177,11 +176,11 @@ export default function TopBar() {
             flex: 1,
           }}
         >
-          <Menu.Item key={tradePageUrl} style={{ margin: '0 10px 0 20px' }}>
+          <Menu.Item key={tradePageUrl} style={{ margin: '0 10px', padding: '0' }}>
             TRADE
           </Menu.Item>
-          {!searchFocussed && (
-            <Menu.Item key="/swap" style={{ margin: '0 10px' }}>
+          {/* {!searchFocussed && (
+            <Menu.Item key="/swap" style={{ margin: '0 10px', padding: '0' }}>
               <a
                 href={EXTERNAL_LINKS['/swap']}
                 target="_blank"
@@ -190,27 +189,27 @@ export default function TopBar() {
                 SWAP
               </a>
             </Menu.Item>
-          )}
+          )} */}
           {connected &&
             (!searchFocussed || location.pathname === '/balances') && (
-              <Menu.Item key="/balances" style={{ margin: '0 10px' }}>
+              <Menu.Item key="/balances" style={{ margin: '0 10px', padding: '0' }}>
                 BALANCES
               </Menu.Item>
             )}
           {connected &&
             (!searchFocussed || location.pathname === '/orders') && (
-              <Menu.Item key="/orders" style={{ margin: '0 10px' }}>
+              <Menu.Item key="/orders" style={{ margin: '0 10px', padding: '0' }}>
                 ORDERS
               </Menu.Item>
             )}
           {connected &&
             (!searchFocussed || location.pathname === '/convert') && (
-              <Menu.Item key="/convert" style={{ margin: '0 10px' }}>
+              <Menu.Item key="/convert" style={{ margin: '0 10px', padding: '0' }}>
                 CONVERT
               </Menu.Item>
             )}
           {(!searchFocussed || location.pathname === '/list-new-market') && (
-            <Menu.Item key="/list-new-market" style={{ margin: '0 10px' }}>
+            <Menu.Item key="/list-new-market" style={{ margin: '0 10px', padding: '0' }}>
               ADD MARKET
             </Menu.Item>
           )}
@@ -220,7 +219,7 @@ export default function TopBar() {
               onTitleClick={() =>
                 window.open(EXTERNAL_LINKS['/learn'], '_blank')
               }
-              style={{ margin: '0 0px 0 10px' }}
+              style={{ margin: '0 10px', padding: '0' }}
             >
               <Menu.Item key="/add-market">
                 <a

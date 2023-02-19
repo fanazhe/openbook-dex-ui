@@ -161,7 +161,7 @@ function TradePageInner() {
       <Wrapper>
         <Row
           align="middle"
-          style={{ paddingLeft: 5, paddingRight: 5 }}
+          style={{ paddingLeft: 5, paddingRight: 5, paddingBottom: 5 }}
           gutter={16}
         >
           <Col>
@@ -261,7 +261,7 @@ function MarketSelector({
               style={{
                 padding: '10px',
                 // @ts-ignore
-                backgroundColor: i % 2 === 0 ? 'rgb(39, 44, 61)' : null,
+                backgroundColor: i % 2 === 0 ? '#eee8d5' : '#fdf6e3',
               }}
             >
               <Row>
@@ -307,7 +307,7 @@ function MarketSelector({
               style={{
                 padding: '10px',
                 // @ts-ignore
-                backgroundColor: i % 2 === 0 ? 'rgb(39, 44, 61)' : null,
+                backgroundColor: i % 2 === 0 ? '#eee8d5' : '#fdf6e3',
               }}
             >
               {name} {deprecated ? ' (Deprecated)' : null}
@@ -366,12 +366,12 @@ const RenderNormal = ({ onChangeOrderRef, onPrice, onSize }) => {
 const RenderSmall = ({ onChangeOrderRef, onPrice, onSize }) => {
   return (
     <>
-      <Row style={{ height: '30vh' }}>
+      <Row style={{ height: '50vh' }}>
         <TVChartContainer />
       </Row>
       <Row
         style={{
-          height: '900px',
+          height: '800px',
         }}
       >
         <Col flex="auto" style={{ height: '100%', display: 'flex' }}>
